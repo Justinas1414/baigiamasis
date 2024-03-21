@@ -13,8 +13,7 @@ public class Driver {
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("start-maximized");
-        options.addArguments("--force-device-scale-factor=0.85");
-        //options.addArguments("window-size=5000,3000");
+        options.addArguments("--force-device-scale-factor=1");
 
         chromeDriver.set(new ChromeDriver(options));
 
@@ -26,7 +25,7 @@ public class Driver {
 
     public static void quitChromeDriver() {
 
-        chromeDriver.get().quit();
+        //chromeDriver.get().quit();
         chromeDriver.remove();
     }
 }
