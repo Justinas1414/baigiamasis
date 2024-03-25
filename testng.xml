@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Vienas_A">
+    <test name="Vienas_A">
+        <classes>
+            <class name="lt.justinas.pom.tests.vienas_a.UserSingUpTest"/>
+            <class name="lt.justinas.pom.tests.vienas_a.UserSingInTest"/>
+            <class name="lt.justinas.pom.tests.vienas_a.AddContactDetailsTest"/>
+            <class name="lt.justinas.pom.tests.vienas_a.AddToCartItemTest"/>
+            <class name="lt.justinas.pom.tests.vienas_a.ItemPurchaseTest"/>
+            <class name="lt.justinas.pom.tests.vienas_a.UserAccountDeletionTest"/>
+        </classes>
+    </test>
+</suite>
