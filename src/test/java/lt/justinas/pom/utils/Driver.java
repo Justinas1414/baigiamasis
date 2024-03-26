@@ -13,7 +13,6 @@ public class Driver {
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("start-maximized");
-
         chromeDriver.set(new ChromeDriver(options));
 
     }
