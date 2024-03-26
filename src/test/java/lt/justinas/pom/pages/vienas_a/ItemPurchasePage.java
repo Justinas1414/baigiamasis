@@ -34,33 +34,13 @@ public class ItemPurchasePage {
 
     }
 
-
-    public static void clickOnFirstAgreementCheckBox() {
-        Common.waitElementPresent(Locators.VienasA.ItemPurchasePage.checkBoxBillingTOS, 8);
-        Common.clickOnElement(Locators.VienasA.ItemPurchasePage.checkBoxBillingTOS);
-
-    }
-
-
-    public static void clickOnButtonContinue() {
-        Common.clickOnElement(Locators.VienasA.ItemPurchasePage.buttonMainButtonUpscale);
+    public static void doubleClickOnRadioButtonShipping() {
+        Common.waitElementVisible(Locators.VienasA.ItemPurchasePage.radioButtonPickUpPoint, 5);
+        Common.doubleClickOnElementByAction(Locators.VienasA.ItemPurchasePage.radioButtonPickUpPoint);
 
     }
 
-    public static void clickOnRadioButton() {
-        Common.clickOnElement(Locators.VienasA.ItemPurchasePage.radioButtonCheckedNameShippingUnused);
-
+    public static String readButtonContinue() {
+        return Common.getTextFromElement(Locators.VienasA.ItemPurchasePage.buttonMainUpcaseFrSmallRadiusCheckoutShippingContinue);
     }
-
-    public static void clickOnRadioButtonPickUpPoint() {
-        Common.clickOnElement(Locators.VienasA.ItemPurchasePage.radioButtonPickUpPoint);
-
-    }
-
-
-    public static String readBuyMessageButton() {
-        return Common.getTextFromElement(Locators.VienasA.ItemPurchasePage.readButtonMessage);
-
-    }
-
 }
