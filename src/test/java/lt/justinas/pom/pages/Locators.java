@@ -2,6 +2,7 @@ package lt.justinas.pom.pages;
 
 import org.openqa.selenium.By;
 
+
 public class Locators {
     public class VienasA {
         public static class UserSingUpPage {
