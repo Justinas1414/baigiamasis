@@ -33,8 +33,7 @@ public class AddContactDetailsTest extends TestBase {
     public void testContactDetailsTest(String inputEmail, String inputPassword,
                                        String firstname, String lastname,
                                        String number, String city,
-                                       String address, String postcode, String expectedResult)
-    {
+                                       String address, String postcode, String expectedResult) {
 
         String actualResult;
 
@@ -60,9 +59,5 @@ public class AddContactDetailsTest extends TestBase {
 
     }
 
-    @AfterMethod
-    public void tearDown() {
-        Common.quitChromeDriver();
-    }
 
 }
