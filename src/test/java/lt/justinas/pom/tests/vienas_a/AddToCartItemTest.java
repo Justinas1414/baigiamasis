@@ -32,8 +32,7 @@ public class AddToCartItemTest extends TestBase {
 
     @Test(dataProvider = "provideLogInDetailsAndItemPurchaseInfo")
     public void testVienas_AItemAddToCart(String inputEmail, String inputPassword,
-                                          String inputItemsName, String expectedResult)
-    {
+                                          String inputItemsName, String expectedResult) {
 
         String actualResult;
 
@@ -50,9 +49,5 @@ public class AddToCartItemTest extends TestBase {
 
     }
 
-    @AfterMethod
-    public void tearDown() {
-        Common.quitChromeDriver();
-    }
 
 }
