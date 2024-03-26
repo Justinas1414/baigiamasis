@@ -52,13 +52,12 @@ public class Locators {
                     "//a[@class='detailed-cart-item__inc-quantity']");
             public static By buttonOnDataDisableWithButton = By.xpath(
                     "//input[@data-disable-with='Pradėti pirkimą']");
-            public static By checkBoxBillingTOS = By.xpath("//input[@id='billing_tos']");
-            public static By buttonMainButtonUpscale = By.xpath("(//button[@name='button'])[2]");
-            public static By radioButtonCheckedNameShippingUnused = By.xpath(
-                    "(//input[@type='radio'])[2]");
-            public static By radioButtonPickUpPoint = By.xpath(
-                    "(//input[@name='pickup_point_id'])[1]");
-            public static By readButtonMessage = By.xpath("(//button[@name='button'])[2]");
+
+            public static By radioButtonPickUpPoint = By.xpath("(//span[@class='info'])[3]");
+
+            public static By buttonMainUpcaseFrSmallRadiusCheckoutShippingContinue = By.xpath(
+                    "//button[@class='main-button upcase fr " +
+                            "small-radius button-min-width checkout-shipping-continue-button']");
         }
 
         public class AddContactDetailsPage {
