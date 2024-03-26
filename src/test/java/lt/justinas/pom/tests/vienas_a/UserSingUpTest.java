@@ -29,8 +29,7 @@ public class UserSingUpTest extends TestBase {
 
     @Test(dataProvider = "provideRegistrationDetails")
     public void testVienas_ARegistration(String firstname, String lastname, String email, String password,
-                                         String expectedResult)
-    {
+                                         String expectedResult) {
 
         String actualResult;
 
@@ -48,11 +47,6 @@ public class UserSingUpTest extends TestBase {
                 "\nExpected: %s,\nActual: %s\n".formatted(expectedResult, actualResult)
         );
 
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        Common.quitChromeDriver();
     }
 
 }
