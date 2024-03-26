@@ -29,8 +29,7 @@ public class UserSingInTest extends TestBase {
     }
 
     @Test(dataProvider = "provideLogInDetails")
-    public void testVienas_ALogIn(String email, String password, String expectedResult)
-    {
+    public void testVienas_ALogIn(String email, String password, String expectedResult) {
 
         String actualResult;
 
@@ -46,9 +45,5 @@ public class UserSingInTest extends TestBase {
 
     }
 
-    @AfterMethod
-    public void tearDown() {
-        Common.quitChromeDriver();
-    }
 }
 
