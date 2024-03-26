@@ -1,11 +1,9 @@
 package lt.justinas.pom.tests.vienas_a;
 
-import lt.justinas.pom.pages.Common;
 import lt.justinas.pom.pages.vienas_a.ItemPurchasePage;
 import lt.justinas.pom.pages.vienas_a.UserSingInPage;
 import lt.justinas.pom.tests.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -23,15 +21,14 @@ public class ItemPurchaseTest extends TestBase {
     @DataProvider(name = "provideLogInDetailsAndItemName")
     public static Object[][] provideLogInDetailsAndItemName() {
         return new Object[][]{
-                {"sileikajustinas@yahoo.com", "Justas123456789*", "irklai", "PIRKTI"
-                }
+                {"sileikajustinas@yahoo.com", "Justas123456789*", "irklai",
+                        "TĘSTI"}
         };
     }
 
     @Test(dataProvider = "provideLogInDetailsAndItemName")
     public void testVienas_AItemPurchase(String inputEmail, String inputPassword,
-                                         String inputItemsName, String expectedResult)
-    {
+                                         String inputItemsName, String expectedResult) {
         String actualResult;
 
         ItemPurchasePage.login(inputEmail, inputPassword);
@@ -39,12 +36,9 @@ public class ItemPurchaseTest extends TestBase {
         ItemPurchasePage.clickOnButtonGoToCart();
         ItemPurchasePage.addAdditionalTwoUnitsToCartByDoubleClick();
         ItemPurchasePage.clickOnStartPurchase();
-        ItemPurchasePage.clickOnRadioButton();
-        ItemPurchasePage.clickOnRadioButtonPickUpPoint();
-        ItemPurchasePage.clickOnButtonContinue();
-        ItemPurchasePage.clickOnFirstAgreementCheckBox();
+        ItemPurchasePage.doubleClickOnRadioButtonShipping();
 
-        actualResult = ItemPurchasePage.readBuyMessageButton();
+        actualResult = ItemPurchasePage.readButtonContinue();
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
@@ -53,8 +47,4 @@ public class ItemPurchaseTest extends TestBase {
 
     }
 
-    @AfterMethod
-    public void tearDown() {
-        Common.quitChromeDriver();
-    }
 }
