@@ -27,8 +27,7 @@ public class UserAccountDeletionTest extends TestBase {
     }
 
     @Test(dataProvider = "provideLogInAndDeleteAccountDetails")
-    public void testVienas_AAcountDeletion(String inputEmail, String inputPassword, String expectedResult)
-    {
+    public void testVienas_AAcountDeletion(String inputEmail, String inputPassword, String expectedResult) {
 
         String actualResult;
 
@@ -38,6 +37,7 @@ public class UserAccountDeletionTest extends TestBase {
         UserAccountDeletionPage.clickOkOnAlert();
         UserAccountDeletionPage.writeTextToAlert(inputEmail);
         UserAccountDeletionPage.clickOkOnAlert();
+        UserAccountDeletionPage.login(inputEmail, inputPassword);
 
         actualResult = UserAccountDeletionPage.getTextFromMainPageToLogIn();
 
@@ -48,9 +48,5 @@ public class UserAccountDeletionTest extends TestBase {
 
     }
 
-    @AfterMethod
-    public void tearDown() {
-        Common.quitChromeDriver();
-    }
 
 }
