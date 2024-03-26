@@ -38,6 +38,7 @@ public class AddContactDetailsPage {
     }
 
     public static void clickOnCityId() {
+        Common.waitElementPresent(Locators.VienasA.AddContactDetailsPage.clickOnCitySelection, 5);
         Common.clickOnElement(Locators.VienasA.AddContactDetailsPage.clickOnCitySelection);
 
     }
