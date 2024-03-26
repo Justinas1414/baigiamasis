@@ -37,7 +37,6 @@ public class UserAccountDeletionTest extends TestBase {
         UserAccountDeletionPage.clickOkOnAlert();
         UserAccountDeletionPage.writeTextToAlert(inputEmail);
         UserAccountDeletionPage.clickOkOnAlert();
-        UserAccountDeletionPage.login(inputEmail, inputPassword);
 
         actualResult = UserAccountDeletionPage.getTextFromMainPageToLogIn();
 
