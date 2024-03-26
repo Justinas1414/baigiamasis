@@ -73,11 +73,11 @@ with number and address, postal code.
 * double click "+", add additional two units to cart;
 * click on button: "Pradėti pirkimą"
 * click on radio button: "Atsiėmimas klientų aptarnavimo centre";
-* click on radio button: "PC „Dangirutis“, Dangeručio g. 1";
-* click on button bellow: "Tęsti";
-* check mark: "Susipažinau ir sutinku su pirkimo taisyklėmis bei privatumo politika";
+* click on radio button: "Pristatyti nurodytu adresu;
 
-* >Expected: after accepting ToS checkmark, user is able to click button "Pirkti".
+
+* >Expected: after selecting "Pristatyti nurodytu adresu", user is able to click button "Tęsti", to complete his 
+  > purchase via selected bank.
 
 ### **6. Users account deletion (UserAccountDeletionTest)**
 
